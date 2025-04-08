@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to WebSteg CTF</title>
+  <title>CTF Challenge by Joshua Min</title>
   <style>
     body {
       background-color: #e6f0ff;
@@ -28,18 +28,45 @@
       padding: 0.3rem 0.6rem;
       margin: 0.3rem;
     }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #0059b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #004080;
+    }
+    .hint-box {
+      display: none;
+      text-align: left;
+      margin-top: 1rem;
+      background-color: #f0f8ff;
+      padding: 1rem;
+      border-left: 4px solid #0059b3;
+      border-radius: 6px;
+    }
   </style>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       document.cookie = "step1=47; path=/;";
     });
+
+    function toggleHints() {
+      const hintBox = document.getElementById("hints");
+      hintBox.style.display = hintBox.style.display === "block" ? "none" : "block";
+    }
   </script>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to WebSteg CTF</h1>
-    <h2>Challenge: Find the hidden code</h2>
-    <p>Your goal is to follow the hidden clues and uncover the final flag. Begin by exploring your browser's storage. 👀</p>
+    <h1>Welcome to Josh Min's CTF</h1>
+    <h2>Challenge: Digital Breadcrumbs</h2>
+    <p>Your goal is to follow the hidden clues and uncover the final flag 👀</p>
     <div>
       <span class="badge">#web</span>
       <span class="badge">#steganography</span>
@@ -47,10 +74,14 @@
       <span class="badge">#source</span>
     </div>
     <p><strong>Category:</strong> Web</p>
-    <h3>Hints:</h3>
-    <ul style="text-align: left">
-      <li>When you find a number, add it to the end of the current URL like this: /12</li>
-    </ul>
+
+    <button onclick="toggleHints()">Show Hints</button>
+    <div id="hints" class="hint-box">
+      <ul>
+        <li>Check your browser’s Application tab → Cookies.</li>
+        <li>When you find a number, add it to the end of the current URL like this: <code>/12</code></li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
