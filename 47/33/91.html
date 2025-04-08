@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Final Step: Find the Flag</title>
+  <title>Congratulations!</title>
   <style>
     body {
       background-color: #e6f0ff;
@@ -19,53 +19,22 @@
       padding: 2rem;
       box-shadow: 0 0 15px rgba(0,0,0,0.15);
     }
-    input {
-      padding: 0.5rem;
-      width: 80%;
-      max-width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    button {
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
-      background-color: #0059b3;
+    .flag {
+      background: #0059b3;
       color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #004080;
-    }
-    .error {
-      color: red;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.3rem;
       margin-top: 1rem;
-      display: none;
+      display: inline-block;
     }
   </style>
-  <script>
-    function checkFlag() {
-      const userInput = document.getElementById('flagInput').value.trim();
-      const correctFlag = 'itc101{Josh_Min_CTF_3737}';
-
-      if (userInput === correctFlag) {
-        window.location.href = 'leave.html';
-      } else {
-        document.getElementById('errorMsg').style.display = 'block';
-      }
-    }
-  </script>
 </head>
 <body>
   <div class="container">
-    <h1>🎉 Final Step 🎉</h1>
-    <p>Enter the flag you found to complete the challenge.</p>
-    <input type="text" id="flagInput" placeholder="Enter flag here..." />
-    <br />
-    <button onclick="checkFlag()">Submit</button>
-    <div id="errorMsg" class="error">❌ That’s not the correct flag. Try again!</div>
+    <h1>🎉 Congratulations! 🎉</h1>
+    <p>You’ve successfully tracked down every clue and solved the challenge.</p>
+    <div class="flag">itc101{Josh_Min_CTF_3737}</div>
   </div>
 </body>
 </html>
