@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the CTF Challenge</title>
-    <style>
-        body {
-            background-color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            font-weight: bold;
-            color: black;
-        }
-        .hidden-text {
-            color: white; /* Makes it invisible on the white background */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to WebSteg CTF</title>
+  <style>
+    body {
+      background-color: #e6f0ff;
+      font-family: Arial, sans-serif;
+      color: #003366;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .badge {
+      display: inline-block;
+      background: #0059b3;
+      color: white;
+      border-radius: 5px;
+      padding: 0.3rem 0.6rem;
+      margin: 0.3rem;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.cookie = "step1=47; path=/;";
+    });
+  </script>
 </head>
 <body>
-    <h1>Welcome to the CTF Challenge!</h1>
-    <p class="hidden-text">54646</p>
+  <div class="container">
+    <h1>Welcome to BlueHunt CTF</h1>
+    <h2>Challenge: Digital Breadcrumbs</h2>
+    <p>Your goal is to follow the hidden clues and uncover the final flag. Begin by exploring your browser's storage. 👀</p>
+    <div>
+      <span class="badge">#web</span>
+      <span class="badge">#steganography</span>
+      <span class="badge">#cookies</span>
+      <span class="badge">#source</span>
+    </div>
+    <p><strong>Category:</strong> Web</p>
+    <h3>Hints:</h3>
+    <ul style="text-align: left">
+      <li>Check your browser’s application tab. Cookies might be sweet and informative.</li>
+      <li>When you find a number, add it to the end of the current URL like this: /47</li>
+    </ul>
+  </div>
 </body>
 </html>
