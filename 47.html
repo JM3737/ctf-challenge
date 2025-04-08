@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Step 2: Good Eye!</title>
+  <title>Page 2 - Keep Digging</title>
   <style>
     body {
       background-color: #e6f0ff;
@@ -19,14 +19,47 @@
       padding: 2rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #0059b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #004080;
+    }
+    .hint-box {
+      display: none;
+      margin-top: 1rem;
+      background-color: #f0f8ff;
+      padding: 1rem;
+      border-left: 4px solid #0059b3;
+      border-radius: 6px;
+    }
   </style>
+  <script>
+    function showHint() {
+      document.getElementById('hintText').style.display = 'block';
+    }
+  </script>
 </head>
 <body>
   <div class="container">
-    <h2>Step 2: You're on the Right Path</h2>
-    <p>Clues are often hidden in plain sight</p>
+    <h1>You're Getting Warmer 🔥</h1>
+    <p>Well done finding the first clue. There’s more hidden under the surface…</p>
+
+    <!-- Hidden hint button -->
+    <button onclick="showHint()">Show Hint</button>
+    <div id="hintText" class="hint-box">
+      <p>Hint: page source</p>
+    </div>
   </div>
+
+  <!-- Hidden message in view-source only -->
+  <!-- Clue: 33 -->
 </body>
-<!-- Hidden clue in source -->
-<!-- next: 33 -->
 </html>
